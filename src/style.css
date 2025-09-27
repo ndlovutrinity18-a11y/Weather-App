@@ -1,0 +1,48 @@
+body {
+    background-image:url("image.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #93e4c1;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#weather-result {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+#forecast {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:#93e4c1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
