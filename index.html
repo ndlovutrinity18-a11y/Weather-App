@@ -6,17 +6,17 @@
     <link rel="stylesheet" href="src/style.css">
     <title>Weather App</title>
 </head>
-<div class="container">
 <body>
+<div class="container">
     <header>
     <form id="weather-form">
-        <input type="text" id="city" placeholder="Enter city.." required>
-        <button type="submit">Search</button>
+        <input type="text" id="city" placeholder="Enter city.." required class="input-field">
+        <input type="submit" value="search" class="submit-button">
     </form>
     <h1>Johannesburg</h1>
     </header>
     <div id="weather-result">
-        <p>Temperature: 22°C</p>
+        <p>Temperature: 🌞22°C</p>
         <p>Condition: Sunny</p>
         <p>Humidity: 45%</p>
         <p>Wind Speed: 10 km/h</p>
@@ -36,7 +36,10 @@
 
     <script src="script.js"></script>
     <footer>
-        <p>Developed by Trinity</p>
+        <p>Developed by <a href="https://github.com/ndlovutrinity18-a11y" target="_blank" rel="noopener noreferrer">Trinity</a>
+            Published on <a href="https://github.com/ndlovutrinity18-a11y/Weather-App" target="_blank" rel="noopener noreferrer">GitHub</a>
+            Hosted on <a href="https://teeweather-app.netlify.app/" target="_blank" rel="noopener noreferrer">Netlify</a>
+        </p>
     </footer>
     </div>
 </body>
