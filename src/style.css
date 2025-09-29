@@ -74,3 +74,9 @@ footer{
     font-size: 12px;
     color:rgba(0, 0, 0, 0.6)
 }
+#temperature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
