@@ -15,6 +15,23 @@ function displayWeatherCondition(response) {
     let windSpeedElement=document.querySelector("#wind-speed");
     windSpeedElement.innerHTML=Math.round(response.data.wind.speed);
 
+    let timeElement=document.querySelector("#time");
+    timeElement.innerHTML=formatDate(new Date(response.data.time*1000));
+}
+function formatDate(date) {
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+    let hours=date.getHours();
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = days[date.getDay()];
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let month = months[date.getMonth()];
+    return `${day}, ${date.getDate()} ${month} ${date.getFullYear()} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
