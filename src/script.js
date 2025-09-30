@@ -17,6 +17,9 @@ function displayWeatherCondition(response) {
 
     let timeElement=document.querySelector("#time");
     timeElement.innerHTML=formatDate(new Date(response.data.time*1000));
+    
+    let iconElement=document.querySelector("#icon");
+    iconElement.innerHTML=`<img src="${response.data.condition.icon_url}" alt="${response.data.condition.description}">`;
 }
 function formatDate(date) {
     let minutes = date.getMinutes();

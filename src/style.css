@@ -1,35 +1,43 @@
-body {
-    background-image:url("image.jpg");
-    background-size: cover;
-    font-family: poppins, sans-serif;
-    margin: 0;
-    padding: 20px;
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
 }
-
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
 header {
-    background-color: #93e4c1;
     color: white;
     padding: 10px 0;
     text-align: center;
 }
 
 #weather-result {
-    background-color:#8dc6ff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     padding: 10px;
     text-align: center;
+    color: #f7f7fe;
 }
 
 h2, h3 {
-    color: #333;
+    color: #f7f7fe;
     text-align: center;
     margin-top: 0;
     margin-bottom: 10px;
     font-style: italic;
 }
 #forecast {
-    background-color: #8dc6ff;
+    background-color: #002f35;
+    color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
@@ -40,8 +48,7 @@ h2, h3 {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color:#93e4c1;
-    border-radius: 10px;
+    border-radius: 1px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 }
@@ -79,4 +86,10 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 5px;
+}
+#icon{
+    font-size: 30px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+
 }

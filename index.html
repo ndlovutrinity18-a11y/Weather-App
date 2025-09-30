@@ -8,17 +8,20 @@
     <title>Weather App</title>
 </head>
 <body>
-<div class="container">
-    <header>
-    <form id="weather-form">
-        <input type="search" placeholder="Enter city.." required id="search-input" class="search-input">
-        <input type="submit" value="search" id="search-button" class="submit-button">
+    <video autoplay muted loop id="bg-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <header>
+            <form id="weather-form">
+                <input type="search" placeholder="Enter city.." required id="search-input" class="search-input">
+                <input type="submit" value="search" id="search-button" class="submit-button">
     </form>
     <h1 id="city"></h1>
     <span id="time">Tuesday, 11 Sep 2025 12:00 PM</span>
     </header>
     <div id="weather-result">
-        <p id="temperature">Temperature:<div id="icon">🌞</div><div id="temperature-value"></div>°C</p>
+        <p id="temperature"><div id="icon"></div><div id="temperature-value"></div>°C</p>
         <p>Condition: <span id="condition"></span></p>
         <p>Humidity: <span id="humidity"></span>%</p>
         <p>Wind:<span id="wind-speed"></span>km/h</p>
