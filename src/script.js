@@ -49,6 +49,23 @@ function handleWeatherFormSubmit(event) {
     searchCity(searchInput.value);
 }
 
+function displayForecast(){
+let forecastElement=document.querySelector("#forecasting-weekly");
+let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+let forecastHtml="";
+days.forEach(function(day){
+    forecastHtml=forecastHtml+`<div id="days">
+        <div class="day-1">
+            <div class="day">${day}</div>
+            <div class="icon">🌞</div>
+            <div class="temp"><strong>25°C</strong>/11°C</div>
+        </div>
+    </div>`;
+});
+forecastElement.innerHTML = forecastHtml;
+
 let weatherFormElement = document.querySelector("#weather-form");
 weatherFormElement.addEventListener("submit",handleWeatherFormSubmit);
 searchCity("Johannesburg");
+}
+displayForecast();
