@@ -91,6 +91,13 @@ footer{
     margin-bottom: -10px;
 
 }
+.icons img{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 30px;
+
+}
 .hours {
     flex-wrap: wrap;
     background-color: #459da0;

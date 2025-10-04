@@ -20,6 +20,7 @@ function displayWeatherCondition(response) {
     
     let iconElement=document.querySelector("#icon");
     iconElement.innerHTML=`<img src="${response.data.condition.icon_url}" alt="${response.data.condition.description}">`;
+    getForecast(response.data.city);
 }
 function formatDate(date) {
     let minutes = date.getMinutes();
@@ -48,24 +49,30 @@ function handleWeatherFormSubmit(event) {
     let searchInput = document.querySelector("#search-input");
     searchCity(searchInput.value);
 }
+function getForecast(city){
+    let apiKey="4o3f7f642638142f8fcf994tc99ba709"
+    let apiUrl=`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
+}
 
-function displayForecast(){
+function displayForecast(response) {
+    console.log(response.data);
 let forecastElement=document.querySelector("#forecasting-weekly");
-let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 let forecastHtml="";
-days.forEach(function(day){
-    forecastHtml=forecastHtml+`<div id="days">
+
+response.data.daily.forEach(function(day){
+    forecastHtml=
+    forecastHtml+`<div id="days">
         <div class="day-1">
-            <div class="day">${day}</div>
-            <div class="icon">🌞</div>
-            <div class="temp"><strong>25°C</strong>/11°C</div>
+            <div class="day">Tuesday</div>
+            <div class="icons"><img src="${day.condition.icon_url}" alt="${day.condition.description}"></div>
+            
+            <div class="temp"><strong>${Math.round(day.temperature.maximum)}°C</strong>/${(Math.round(day.temperature.minimum))}°C</div>
         </div>
     </div>`;
 });
 forecastElement.innerHTML = forecastHtml;
-
+}
 let weatherFormElement = document.querySelector("#weather-form");
 weatherFormElement.addEventListener("submit",handleWeatherFormSubmit);
 searchCity("Johannesburg");
-}
-displayForecast();
